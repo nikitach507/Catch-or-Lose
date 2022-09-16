@@ -332,6 +332,6 @@ while game:
     if menu_state == "main":
         history_of_scores.insert(0, game_score)
         delete_character()
-        game_score, life, level = 0, 3, 0
+        game_score, life, level = 0, 3, 1
         speed_min, speed_max, speed_portal = 1, 2, 8
 quit()
