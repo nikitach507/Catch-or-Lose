@@ -137,7 +137,7 @@ def collide_characters():
                 character.kill()
             elif character.action == "damage":
                 d_catch.play()
-                d_catch.set_volume(0.2)
+                d_catch.set_volume(0.3)
                 screen.fill(RED)
                 game_score -= character.score
                 character.kill()
@@ -149,10 +149,11 @@ def collide_characters():
                     draw_text(f"{game_score} points", ARIAL_BLACK_25, WHITE, 540, 500)
                     display.flip()
                     time.wait(3000)
+                    menu_state = "main"
                     game_start, running = False, False
             else:
                 c_catch.play()
-                c_catch.set_volume(0.1)
+                c_catch.set_volume(0.2)
                 game_score += character.score
                 character.kill()
 
